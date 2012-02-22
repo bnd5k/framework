@@ -28,10 +28,11 @@ test:
   adapter: mysql2
   encoding: utf8
   reconnect: false
-  database: framework_test
+  database: framework_development
   pool: 5
-  username: root
-  password:
+  username: honcho77
+  password: GinTonic88
+  host: localhost #127.0.0.1 #
   socket: /tmp/mysql.sock
 
 production:
