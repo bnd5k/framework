@@ -7,6 +7,7 @@ gem 'rails', '3.1.3'
 
 #gem 'mysql'
 gem 'mysql2'
+gem 'gravatar_image_tag'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -21,6 +22,7 @@ gem 'jquery-rails'
 
 group :development do
   gem 'rspec-rails', '>= 2.6.1'
+  gem 'annotate', '2.4.1.beta1' #'>= 2.4.0' 
 end
 
 group :test do
@@ -30,6 +32,7 @@ group :test do
   gem 'autotest-rails-pure', '>= 4.1.2'
   gem 'autotest-fsevent', '>= 0.2.4'
   gem 'autotest-growl', '>= 0.2.16'
+  gem 'factory_girl_rails'
 end
 
 # To use ActiveModel has_secure_password
