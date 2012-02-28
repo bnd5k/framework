@@ -3,7 +3,8 @@ require 'spec_helper'
 describe UsersController do
    render_views
 
-describe "GET 'show'" do
+
+  describe "GET 'show'" do
 
     before(:each) do
       @user = Factory(:user)
@@ -36,11 +37,14 @@ describe "GET 'show'" do
     
   end
       
-  before(:each) do
-    @base_title = "framework "
-  end
-  
+
+
   describe "GET 'new'" do
+    before(:each) do
+      @base_title = "framework "
+      @user = Factory(:user)
+    end 
+ 
     it "returns http success" do
       get 'new'
       response.should be_success
@@ -50,8 +54,30 @@ describe "GET 'show'" do
       get 'new'
       response.should have_selector("title", :content => @base_title + "| Sign up")
     end
+ 
+    it "should have a name field" do
+      get :new
+      response.should have_selector("input[name='user[name]'][type='text']")
+    end   
+    
+    it "should have an email field" do
+      get :new
+      response.should have_selector("input[name='user[email]'][type='text']") 
+    end
+    
+    it "should have a password field" do
+      get :new
+      response.should have_selector("input[name='user[password]'][type='password']") 
+    end
+    
+    it "should have a password confirmation field" do
+      get :new
+      response.should have_selector("input[name='user[password_confirmation]'][type='password']") 
+    end
+          
   end
-describe "POST 'create'" do
+  
+  describe "POST 'create'" do
 
     describe "failure" do
 
