@@ -61,6 +61,19 @@ describe "Users" do
         click_link "Sign out"
         controller.should_not be_signed_in
       end
+      
+      it "should redirect the user to root when a signed in user tried to sign up" do
+        user = Factory(:user)
+        visit signin_path
+        fill_in :email,    :with => user.email
+        fill_in :password, :with => user.password
+        click_button
+        visit root_path
+        click_link "Sign up"
+        response.should render_template('pages/home')
+        response.should have_selector("div.flash.error", :content => "Why sign up again?  You're already in!")
+        
+      end 
     end
   end
 end
