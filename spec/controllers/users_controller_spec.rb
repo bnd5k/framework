@@ -94,11 +94,7 @@ describe UsersController do
 
 
   describe "GET 'new'" do
- #   before(:each) do
- #     @base_title = "framework "
- #     @user = Factory(:user)
- #   end 
- 
+
     it "returns http success" do
       get 'new'
       response.should be_success
