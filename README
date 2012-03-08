@@ -6,7 +6,7 @@ Once you fork this repo, be sure to rename the project and use that name to repl
 
 App name
 app/helpers/application_helper.rb
-app/views/layouts/application.rb:18
+app/views/layouts/application.rb:18...actually congig/application.rb:18
 rakefile:7
 config.ru: 4
 config/database.yml: 15, 31, 42
@@ -15,7 +15,7 @@ config/environments/test.rb:1
 config/environments/production.rb:1
 config/environment.rb:5
 config/initializers/secret_token.rb:7
-config/initializers/secret_token.rb:3 (x2)
+config/initializers/session_store.rb:3 (x2)
 config/routes:1
 spec/controllers/pages_controller_spec.rb:7, 16
 
