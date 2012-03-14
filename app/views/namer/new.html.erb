@@ -1,0 +1,7 @@
+<h1>Rails Framework</h1>
+
+<%= form_tag "/namer" do %>
+  <%= text_field_tag "appname" %>
+  <%= submit_tag "Name Your App" ,  :action => 'create' %>
+
+<% end %>

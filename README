@@ -1,24 +1,31 @@
-This rails project framework is based of of Hartl's "Rails Tutorial," specifically the sample_app.  This frameworks includes some, though not all of the excercises recommended in that book.
-My intention was to create a platform that contained the necessary elements of most websites.  
+This rails project framework is based of of Hartl's "Rails Tutorial," specifically the sample_app.  It includes some but not all of the excercises recommended.
+Use this webapp to give you a simple cms platform that contains the necessary elements of most websites.  
 
+I assume you already have setup Ruby, Rails, and Github.  
 
-Once you fork this repo, be sure to rename the project and use that name to replace the following instances that use the term "framework."
+Once you clone this repo to your desired directory, CD into the framework directory and type "rails server."  There, you will be asked to provide a new name for your webapp.
+Once press the "Rename" button, all the following instances of the term "Framework" will be changed to the name you provided.  But you will still have to manually change 
+the root directory's name from framework. (Can't change the present working directory while inside it.)
 
-App name
-app/helpers/application_helper.rb
-app/views/layouts/application.rb:18...actually congig/application.rb:18
-rakefile:7
-config.ru: 4
-config/database.yml: 15, 31, 42
-config/environments/development.rb:1
-config/environments/test.rb:1
-config/environments/production.rb:1
-config/environment.rb:5
-config/initializers/secret_token.rb:7
-config/initializers/session_store.rb:3 (x2)
-config/routes:1
-spec/controllers/pages_controller_spec.rb:7, 16
+	app/helpers/application_helper.rb:4
+	rakefile:7
+	congig/application.rb:18
+	config.ru: 4
+	config/database.yml: 15, 31, 42
+	config/environments/development.rb:1
+	config/environments/test.rb:1
+	config/environments/production.rb:1
+	config/environment.rb:5
+	config/initializers/secret_token.rb:7
+	config/initializers/session_store.rb:3 (x2) and 8
+	config/routes:1
+	spec/controllers/pages_controller_spec.rb:7, 16
 
+Also, be sure to add your logo to assets/images since the current default logo is the Rails icon.  You'll also have to update app/helpers/application_helper.rb and
+the corresponding test, located in update spec/controllers/pages_controller_spec with the logo's name and location. 
 
-Also, be sure to add your logo and update spec/controllers/pages_controller_spec with it's location.
+Happy developing!
 
+  post '/namer' => 'namer#create'    
+  root :to => "namer#new"
+   

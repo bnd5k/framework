@@ -17,16 +17,7 @@ class UsersController < ApplicationController
     end  
   end
 
-def index
-    @title = "All users"
-    @users = User.paginate(:page => params[:page])
-  end
 
-  def show
-    @user = User.find(params[:id])
-    @title = @user.name
-  end
-  
   def create
     @user = User.new(params[:user])
     if @user.save
@@ -39,6 +30,18 @@ def index
       
     end
   end
+  
+def index
+    @title = "All users"
+    @users = User.paginate(:page => params[:page])
+  end
+
+  def show
+    @user = User.find(params[:id])
+    @title = @user.name
+  end
+  
+
  
    def edit
     @user = User.find(params[:id])
@@ -77,4 +80,3 @@ def index
       redirect_to(root_path) unless current_user.admin?
     end    
 end
-
