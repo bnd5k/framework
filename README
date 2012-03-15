@@ -28,4 +28,5 @@ Happy developing!
 
   post '/namer' => 'namer#create'    
   root :to => "namer#new"
+  
    

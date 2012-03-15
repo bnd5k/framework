@@ -10,10 +10,8 @@ Framework::Application.routes.draw do
   match '/contact', :to => 'pages#contact'
   match '/about',   :to => 'pages#about' 
   match '/help',    :to => 'pages#help'
-        
-
-  post '/namer' => 'namer#create'    
-  root :to => "namer#new"
+            
+  root :to => "pages#home"
    
   match ':controller(/:action(/:id(.:format)))'
    
