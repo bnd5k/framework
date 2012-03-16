@@ -4,12 +4,24 @@
 # or operating system, you probably want to add a global ignore instead:
 #   git config --global core.excludesfile ~/.gitignore_global
 
-# Ignore bundler config
+#general list of files to ignore, per this template: https://github.com/github/gitignore/blob/master/Rails.gitignore
+
+#*.rbc
+#*.sassc
+.sass-cache
+#capybara-*.html
+.rspec
 /.bundle
-
-# Ignore the default SQLite database.
+#/vendor/bundle
+/log/*
+/tmp/*
 /db/*.sqlite3
+#/public/system/*
+/coverage/
+/spec/tmp/*
+**.orig
+#rerun.txt
+#pickle-email-*.html
 
-# Ignore all logfiles and tempfiles.
-/log/*.log
-/tmp
+# I added this one.  Because fuck .DS_Store.
+.DS_Store
