@@ -8,7 +8,7 @@ gem 'thin'
 gem 'gravatar_image_tag'#, '1.0.0.pre2'
 gem 'will_paginate', "~> 3.0.2" #, '3.0.pre2'
 gem 'jquery-rails'
-gem 'ruby-pg'
+gem 'pg'
 gem 'lunchy'
 
 # Gems used only for assets and not required
