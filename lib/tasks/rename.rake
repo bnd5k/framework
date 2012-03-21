@@ -11,7 +11,7 @@ namespace :rename do
                     'spec/controllers/pages_controller_spec.rb']
       file_names.each do |file_name|
         text = File.read(file_name)
-        File.open(file_name, "w") { |file| file << text.gsub("Framework", args[:new_name]) }
+        File.open(file_name, "w") { |file| file << text.gsub("Framework", args[:new_name.capitalize]) }
       end   
     end 
  
