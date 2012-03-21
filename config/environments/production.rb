@@ -20,6 +20,8 @@ Framework::Application.configure do
   # Generate digests for assets URLs
   config.assets.digest = true
 
+  #had trouble with Heroku, so I added this. Found here http://stackoverflow.com/questions/7300532/blueprint-css-rails-3-1-help.
+  config.assets.compile = true
   # Defaults to Rails.root.join("public/assets")
   # config.assets.manifest = YOUR_PATH
 
