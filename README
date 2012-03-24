@@ -1,12 +1,13 @@
 This rails project framework is based of of Hartl's "Rails Tutorial," specifically the sample_app.  It includes some but not all of the excercises recommended.
 Use this webapp to give you a simple cms platform that contains the necessary elements of most websites.  
 
-I assume you already have setup Ruby, Rails, and Github.  
+I assume you already have setup Ruby, Rails, Git and Github.  
 
-Once you clone this repo to your desired directory, CD into the framework directory and type "rails server."  There, you will be asked to provide a new name for your webapp.
-Once press the "Rename" button, all the following instances of the term "Framework" will be changed to the name you provided.  But you will still have to manually change 
-the root directory's name from framework. (Can't change the present working directory while inside it.)
+Once you clone this repo to your desired directory, change the directory name from "Framework" to the name of your app. Next, cd into the newly renamed directory and type
+"bundle install".  Finally, you can replace the following instances of the term "Framework" with your own app's name by running the rename rake task.  If you want to name your
+app "NewApp", you would type this: rake rename:to[NewApp].
 
+	app/views/pages/home.html.erb.rb:1
 	app/helpers/application_helper.rb:4
 	rakefile:7
 	congig/application.rb:18
@@ -25,8 +26,5 @@ Also, be sure to add your logo to assets/images since the current default logo i
 the corresponding test, located in update spec/controllers/pages_controller_spec with the logo's name and location. 
 
 Happy developing!
-
-  post '/namer' => 'namer#create'    
-  root :to => "namer#new"
   
    
