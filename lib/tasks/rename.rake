@@ -7,10 +7,9 @@ namespace :rename do
       # change any instances of the term "framework" to the new name of the app   
       #for testing, just change these: file_names = ['config/environment.rb'] #['config/environments/test.rb', 'config/environments/production.rb', 'config/environment.rb']
       #chagen uppercase instances
-      file_names = [ 'rakefile', 'config/application.rb', 'config.ru', 'config/database.yml', 
-                    'config/environments/development.rb', 'config/environments/test.rb', 'config/environments/production.rb', 
-                    'config/environment.rb', 'config/initializers/secret_token.rb', 'config/initializers/session_store.rb', 'config/routes.rb', 
-                    ]
+      file_names = [ 'rakefile', 'config/application.rb', 'config.ru', 'config/database.yml', 'config/environments/development.rb',
+                     'config/environments/test.rb', 'config/environments/production.rb', 'config/environment.rb', 'config/initializers/secret_token.rb',
+                     'config/initializers/session_store.rb', 'config/routes.rb',  'app/views/pages/home.html.erb']
       file_names.each do |file_name|
         text = File.read(file_name)
         File.open(file_name, "w") { |file| file << text.gsub("Framework", args[:new_name]) }
