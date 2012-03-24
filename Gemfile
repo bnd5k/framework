@@ -23,14 +23,14 @@ gem 'lunchy'
 
 
 group :development do
-  #gem 'mysql2'
+  gem 'mysql2'
   gem 'rspec-rails', '>= 2.6.1'
   gem 'annotate', '2.4.1.beta1' #'>= 2.4.0' 
   gem 'faker'#, '0.3.1'
 end
 
 group :test do
-  #gem 'mysql2'
+  gem 'mysql2'
   gem 'rspec-rails', '>= 2.6.1'
   gem 'webrat', '>= 0.7.1'
   gem 'autotest', '>= 4.4.6'
@@ -42,7 +42,7 @@ end
 
 
 group :production do
- # gem 'pg' #Heroku digs postgress, not MySql, so here I added Matz's postrgres gem
+  gem 'pg' #Heroku digs postgress, not MySql, so here I added Matz's postrgres gem
   gem 'heroku'
 
 end
